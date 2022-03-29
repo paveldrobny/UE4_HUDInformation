@@ -85,7 +85,7 @@ bool AThirdGameCharacter::TraceHUDInformation(float RangeTraceInMeters, bool isD
 	GetController()->GetPlayerViewPoint(Location, Rotator);
 
 	FVector Start = Location;
-	FVector End = Start + (Rotator.Vector() * RangeTraceInMeters);
+	FVector End = Start + (Rotator.Vector() * RangeTraceInMeters / 100);
 
 	FCollisionQueryParams TraceParams;
 
